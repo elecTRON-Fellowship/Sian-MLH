@@ -55,7 +55,7 @@ The current point system that we have is dynamic but we would love to introduce 
 
 ## Try it out here
 You can download the apk file to try it out yourself!</br>
-Download it here - [Sian](https://www.figma.com/file/7pO11LUXzfJ1s8nq2i7qZP/Bon-Voyage-Hacks?node-id=0%3A1)
+Download it here - [Sian](https://drive.google.com/drive/folders/1-GV4iofJgW17xEWMMIu47BEPczPhSqy6)
 
 ## Creators 
 This Project was built by - 
