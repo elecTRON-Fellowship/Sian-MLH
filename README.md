@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/elecTRON-Fellowship/Sian-MLH/blob/main/designs/figma/Logo%20(1).png" alt="drawing" width="300"/>
+<img src="https://github.com/elecTRON-Fellowship/Sian-MLH/blob/main/designs/figma/Logo%20(2).png" alt="drawing" width="300"/>
 </p>
 
 
