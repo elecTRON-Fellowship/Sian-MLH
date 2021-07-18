@@ -1,3 +1,6 @@
+<p align="center">
+<img src="https://github.com/elecTRON-Fellowship/Sian-MLH/blob/main/designs/figma/Logo%20(1).png" alt="drawing" width="300"/>
+</p>
 
 
 ## Inspiration🌠
@@ -23,6 +26,19 @@ Every time the user shares clicks and shares images, they receive some reward po
 ![image](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)  ![image](https://img.shields.io/badge/adobe-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white)  ![image](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)  ![image](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)  ![image](https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)  ![image](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)  ![image](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) </br>
 We started off by creating a prototype in **Figma**. The mobile application was built using **Flutter** and Dart. We made use of **Firebase** for authentication and for saving user data. We made use of **Google Maps SDK** to integrate a map in our application. We used the Flutter Camera module to capture and share images on social media. We also used Flutter module and the **Calender SDK** to add a calendar and for adding events to it in the application. All in all, Sian relies heavily on **Google Could** and the suite of SDKs and functionalities it provides to deliver our users a feature-rich experience.
 
+## Project Gallery📷
+Figma Design File - [Sian](https://www.figma.com/file/7pO11LUXzfJ1s8nq2i7qZP/Bon-Voyage-Hacks?node-id=0%3A1)
+
+</br>
+<p align="center">
+<img src="https://github.com/elecTRON-Fellowship/Sian-MLH/blob/main/designs/figma/Group%201.png" alt="drawing" width="700"/>
+</p>
+<p align="center">
+<img src="https://github.com/elecTRON-Fellowship/Sian-MLH/blob/main/designs/figma/Group%202.png" alt="drawing" width="700"/>
+</p>
+<p align="center">
+<img src="https://github.com/elecTRON-Fellowship/Sian-MLH/blob/main/designs/figma/Group%203.png" alt="drawing" width="700"/>
+</p>
 
 ## Challenges we ran into🔴
 We ran into some problems with authentication as connecting applications with firebase can be troublesome sometimes. Flutter still being a little new to all of us, we faced some issues with the compatibility of the app with different devices and had to spend a lot of time fixing that.
