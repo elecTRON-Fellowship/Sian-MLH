@@ -23,8 +23,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     double _height = MediaQuery.of(context).size.height;
     double _width = MediaQuery.of(context).size.width;
-    print(_height);
-    print(_width);
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color(0xff7f5af0),
@@ -83,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 SvgPicture.asset(
                   "assets/travelscape.svg",
-                  height: _height * 250 / 744,
+                  height: _height * 250/744,
                 ),
                 Align(
                   alignment: Alignment.bottomLeft,
