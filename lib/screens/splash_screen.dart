@@ -39,11 +39,11 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          color: Color(0xff222831),
+          color: Color(0xff7f5af0),
         ),
         child: Center(
           child: SvgPicture.asset(
-            'assets/SIAN.svg',
+            'assets/travelscape.svg',
             semanticsLabel: 'vector',
           ),
         ),

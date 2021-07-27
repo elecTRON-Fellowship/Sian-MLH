@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:sian/screens/camera_preview_screen.dart';
+import 'package:travelscape/screens/camera_preview_screen.dart';
 
 class CameraScreen extends StatefulWidget {
   CameraScreen(this.cameras);

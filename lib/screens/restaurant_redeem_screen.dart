@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sian/widgets/custom_app_bar.dart';
-import 'package:sian/widgets/redeem_card.dart';
+import 'package:travelscape/widgets/custom_app_bar.dart';
+import 'package:travelscape/widgets/redeem_card.dart';
 
 
 class RestaurantRedeemScreen extends StatelessWidget {

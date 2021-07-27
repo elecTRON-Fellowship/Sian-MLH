@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sian/screens/home_screen.dart';
-import 'package:sian/widgets/auth.dart';
-import 'package:sian/widgets/google_auth.dart';
+import 'package:travelscape/screens/home_screen.dart';
+import 'package:travelscape/widgets/auth.dart';
+import 'package:travelscape/widgets/google_auth.dart';
 
 // ignore: camel_case_types
 class LoginScreen extends StatefulWidget {
@@ -29,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
     print(width);
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xff222831),
+        backgroundColor: Color(0xff7f5af0),
         body: ListView(
           children: [
             Column(
@@ -42,12 +42,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SvgPicture.asset(
-                      "assets/SIAN.svg",
+                      "assets/travelscape.svg",
                       height: 350,
                     ),
                     Container(
                       width: width,
-                      // height: 489 / 812 * height,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(36),
@@ -62,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             offset: Offset(0, 4),
                           ),
                         ],
-                        color: Color(0xffeeeeee),
+                        color: Color(0xff16161a),
                       ),
                       padding: const EdgeInsets.only(
                         top: 30,
@@ -75,12 +74,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         children: [
                           SizedBox(
                             width: 313 / 375 * width,
-                            // height: 45 / 812 * height,
                             child: Text(
                               "Log In",
                               textAlign: TextAlign.center,
                               style: GoogleFonts.poppins(
-                                color: Color(0xff393e46),
+                                color: Color(0xfffffffe),
                                 fontSize: 36,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -93,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: TextField(
                               controller: emailController,
                               style: GoogleFonts.poppins(
-                                color: Colors.black,
+                                color: Color(0xffd5d7d9),
                                 fontSize: 15,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -102,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 // errorText: error,
                                 labelText: "Email",
                                 labelStyle: GoogleFonts.poppins(
-                                  color: Colors.black,
+                                  color: Color(0xffd5d7d9),
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                 ),
@@ -114,56 +112,14 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ),
                           ),
-
                           SizedBox(height: 21 / 812 * height),
-                          // Container(
-                          //   width: 300,
-                          //   height: 40,
-                          //   child: Row(
-                          //     mainAxisSize: MainAxisSize.min,
-                          //     mainAxisAlignment: MainAxisAlignment.center,
-                          //     crossAxisAlignment: CrossAxisAlignment.center,
-                          //     children: [
-                          //       Container(
-                          //         width: 300,
-                          //         height: 40,
-                          //         decoration: BoxDecoration(
-                          //           borderRadius: BorderRadius.circular(20),
-                          //           color: Color(0x3f000000),
-                          //         ),
-                          //         padding: const EdgeInsets.only(
-                          //           left: 17,
-                          //           right: 209,
-                          //           top: 11,
-                          //           bottom: 6,
-                          //         ),
-                          //         child: Row(
-                          //           mainAxisSize: MainAxisSize.min,
-                          //           mainAxisAlignment: MainAxisAlignment.start,
-                          //           crossAxisAlignment:
-                          //               CrossAxisAlignment.center,
-                          //           children: [
-                          //             Text(
-                          //               "Password",
-                          //               style: GoogleFonts.poppins(
-                          //                 color: Color(0xff393e46),
-                          //                 fontSize: 15,
-                          //                 fontWeight: FontWeight.w500,
-                          //               ),
-                          //             ),
-                          //           ],
-                          //         ),
-                          //       ),
-                          //     ],
-                          //   ),
-                          // ),
                           Container(
                             width: 300,
                             height: 40,
                             child: TextField(
                               controller: passwordController,
                               style: GoogleFonts.poppins(
-                                color: Colors.black,
+                                color: Color(0xffd5d7d9),
                                 fontSize: 15,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -172,7 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 // errorText: error,
                                 labelText: "Password",
                                 labelStyle: GoogleFonts.poppins(
-                                  color: Colors.black,
+                                  color: Color(0xffd5d7d9),
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                 ),
@@ -300,7 +256,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                         Text(
                                           "Log In",
                                           style: GoogleFonts.poppins(
-                                            color: Color(0xff393e46),
+                                            color: Color(0xfffffffe),
                                             fontSize: 15,
                                             fontWeight: FontWeight.w500,
                                           ),
@@ -314,8 +270,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           SizedBox(height: 21 / 812 * height),
                           Container(
-                            // width: screen_width * 0.160,
-                            // height: screen_height * 0.063,
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -327,12 +281,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                     height: 50,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(14),
-                                      color: Color(0xff222831),
+                                      color: Color(0xfffffffe),
                                     ),
                                     child: Icon(
                                       FontAwesomeIcons.google,
                                       size: 30,
-                                      color: Color(0xffeeeeee),
+                                      color: Color(0xff16161a),
                                     ),
                                   ),
                                   onTap: () {
@@ -350,12 +304,11 @@ class _LoginScreenState extends State<LoginScreen> {
                               ],
                             ),
                           ),
-
                           SizedBox(height: 21 / 812 * height),
                           Container(
                             width: 331,
                             height: 2,
-                            color: Color(0x7fc4c4c4),
+                            color: Color(0x7f94a1b2),
                           ),
                           SizedBox(height: 21 / 812 * height),
                           InkWell(
@@ -365,7 +318,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: Text(
                               "Don't have an account? Create Account",
                               style: GoogleFonts.poppins(
-                                fontSize: 16,
+                                fontSize: 14,
+                                color: Color(0xfffffffe),
                               ),
                             ),
                           ),

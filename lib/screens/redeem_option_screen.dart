@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'package:sian/widgets/custom_app_bar.dart';
-import 'package:sian/widgets/redeem_option_card.dart';
+import 'package:travelscape/widgets/custom_app_bar.dart';
+import 'package:travelscape/widgets/redeem_option_card.dart';
 
 class RedeemOptionScreen extends StatelessWidget {
   const RedeemOptionScreen({Key? key}) : super(key: key);

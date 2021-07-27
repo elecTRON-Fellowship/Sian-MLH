@@ -1,9 +1,9 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sian/widgets/custom_app_bar.dart';
-import 'package:sian/widgets/model/event.dart';
+import 'package:travelscape/widgets/custom_app_bar.dart';
+import 'package:travelscape/widgets/model/event.dart';
 import 'package:flutter/material.dart';
-import 'package:sian/widgets/reward_point.dart';
+import 'package:travelscape/widgets/reward_point.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class CalendarScreen extends StatefulWidget {
@@ -43,26 +43,6 @@ class _CalendarState extends State<CalendarScreen> {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Color(0xff222831),
-      // appBar: AppBar(
-      //   title: Text(
-      //     "Travel Planner",
-      //     style: GoogleFonts.poppins(
-      //       color: Color(0xff393e46),
-      //       fontSize: 25,
-      //       fontWeight: FontWeight.w700,
-      //     ),
-      //   ),
-      //   centerTitle: true,
-      //   toolbarHeight: 70 / 812 * height,
-      //   iconTheme: IconThemeData(color: Colors.black),
-      //   backgroundColor: Color(0xffeeeeee),
-      //   shape: RoundedRectangleBorder(
-      //     borderRadius: BorderRadius.only(
-      //       bottomLeft: Radius.circular(30),
-      //       bottomRight: Radius.circular(30),
-      //     ),
-      //   ),
-      // ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -340,46 +320,6 @@ class _CalendarState extends State<CalendarScreen> {
           ),
         ),
       ),
-      // floatingActionButton: FloatingActionButton.extended(
-      //   onPressed: () => showDialog(
-      //     context: context,
-      //     builder: (context) => AlertDialog(
-      //       title: Text("Add Event"),
-      //       content: TextFormField(
-      //         controller: _eventController,
-      //       ),
-      //       actions: [
-      //         TextButton(
-      //           child: Text("Cancel"),
-      //           onPressed: () => Navigator.pop(context),
-      //         ),
-      //         TextButton(
-      //           child: Text("Ok"),
-      //           onPressed: () {
-      //             if (_eventController.text.isEmpty) {
-      //             } else {
-      //               if (selectedEvents?[selectedDay] != null) {
-      //                 selectedEvents?[selectedDay]!.add(
-      //                   Event(title: _eventController.text),
-      //                 );
-      //               } else {
-      //                 selectedEvents?[selectedDay] = [
-      //                   Event(title: _eventController.text)
-      //                 ];
-      //               }
-      //             }
-      //             Navigator.pop(context);
-      //             _eventController.clear();
-      //             setState(() {});
-      //             return;
-      //           },
-      //         ),
-      //       ],
-      //     ),
-      //   ),
-      //   label: Text("Add Event"),
-      //   icon: Icon(Icons.add),
-      // ),
     );
   }
 }

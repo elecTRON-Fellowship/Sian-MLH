@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sian/screens/home_screen.dart';
-import 'package:sian/widgets/auth.dart';
+import 'package:travelscape/screens/home_screen.dart';
+import 'package:travelscape/widgets/auth.dart';
 
 // ignore: camel_case_types
 class CreateAccountScreen extends StatefulWidget {
@@ -25,7 +25,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
     double width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xff222831),
+        backgroundColor: Color(0xff7f5af0),
         body: ListView(
           children: [
             Column(
@@ -37,12 +37,11 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SvgPicture.asset(
-                      "assets/SIAN.svg",
+                      "assets/travelscape.svg",
                       height: 350,
                     ),
                     Container(
                       width: width,
-                      // height: 489 / 812 * height,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(36),
@@ -57,7 +56,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                             offset: Offset(0, 4),
                           ),
                         ],
-                        color: Color(0xffeeeeee),
+                        color: Color(0xff16161a),
                       ),
                       padding: const EdgeInsets.only(
                         top: 30,
@@ -75,61 +74,20 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                               "Create Account",
                               textAlign: TextAlign.center,
                               style: GoogleFonts.poppins(
-                                color: Color(0xff393e46),
+                                color: Color(0xfffffffe),
                                 fontSize: 36,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
                           ),
                           SizedBox(height: 30.83 / 812 * height),
-                          // Container(
-                          //   width: 300,
-                          //   height: 40,
-                          //   child: Row(
-                          //     mainAxisSize: MainAxisSize.min,
-                          //     mainAxisAlignment: MainAxisAlignment.center,
-                          //     crossAxisAlignment: CrossAxisAlignment.center,
-                          //     children: [
-                          //       Container(
-                          //         width: 300,
-                          //         height: 40,
-                          //         decoration: BoxDecoration(
-                          //           borderRadius: BorderRadius.circular(20),
-                          //           color: Color(0x3f000000),
-                          //         ),
-                          //         padding: const EdgeInsets.only(
-                          //           left: 17,
-                          //           right: 237,
-                          //           top: 9,
-                          //           bottom: 6,
-                          //         ),
-                          //         child: Row(
-                          //           mainAxisSize: MainAxisSize.min,
-                          //           mainAxisAlignment: MainAxisAlignment.start,
-                          //           crossAxisAlignment:
-                          //               CrossAxisAlignment.center,
-                          //           children: [
-                          //             Text(
-                          //               "Name",
-                          //               style: GoogleFonts.poppins(
-                          //                 color: Color(0xff393e46),
-                          //                 fontSize: 15,
-                          //                 fontWeight: FontWeight.w500,
-                          //               ),
-                          //             ),
-                          //           ],
-                          //         ),
-                          //       ),
-                          //     ],
-                          //   ),
-                          // ),
                           Container(
                             width: 300 / 375 * width,
                             height: 40 / 812 * height,
                             child: TextField(
                               controller: nameController,
                               style: GoogleFonts.poppins(
-                                color: Colors.black,
+                                color: Color(0xffd5d7d9),
                                 fontSize: 15,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -138,7 +96,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                 // errorText: error,
                                 labelText: "Name",
                                 labelStyle: GoogleFonts.poppins(
-                                  color: Colors.black,
+                                  color: Color(0xffd5d7d9),
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                 ),
@@ -151,54 +109,13 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                             ),
                           ),
                           SizedBox(height: 21 / 812 * height),
-                          // Container(
-                          //   width: 300,
-                          //   height: 40,
-                          //   child: Row(
-                          //     mainAxisSize: MainAxisSize.min,
-                          //     mainAxisAlignment: MainAxisAlignment.center,
-                          //     crossAxisAlignment: CrossAxisAlignment.center,
-                          //     children: [
-                          //       Container(
-                          //         width: 300,
-                          //         height: 40,
-                          //         decoration: BoxDecoration(
-                          //           borderRadius: BorderRadius.circular(20),
-                          //           color: Color(0x3f000000),
-                          //         ),
-                          //         padding: const EdgeInsets.only(
-                          //           left: 17,
-                          //           right: 223,
-                          //           top: 11,
-                          //           bottom: 7,
-                          //         ),
-                          //         child: Row(
-                          //           mainAxisSize: MainAxisSize.min,
-                          //           mainAxisAlignment: MainAxisAlignment.start,
-                          //           crossAxisAlignment:
-                          //               CrossAxisAlignment.center,
-                          //           children: [
-                          //             Text(
-                          //               "Email Id",
-                          //               style: GoogleFonts.poppins(
-                          //                 color: Color(0xff393e46),
-                          //                 fontSize: 15,
-                          //                 fontWeight: FontWeight.w500,
-                          //               ),
-                          //             ),
-                          //           ],
-                          //         ),
-                          //       ),
-                          //     ],
-                          //   ),
-                          // ),
                           Container(
                             width: 300 / 375 * width,
                             height: 40 / 812 * height,
                             child: TextField(
                               controller: emailController,
                               style: GoogleFonts.poppins(
-                                color: Colors.black,
+                                color: Color(0xffd5d7d9),
                                 fontSize: 15,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -207,7 +124,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                 // errorText: error,
                                 labelText: "Email",
                                 labelStyle: GoogleFonts.poppins(
-                                  color: Colors.black,
+                                  color: Color(0xffd5d7d9),
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                 ),
@@ -220,54 +137,13 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                             ),
                           ),
                           SizedBox(height: 21 / 812 * height),
-                          // Container(
-                          //   width: 300,
-                          //   height: 40,
-                          //   child: Row(
-                          //     mainAxisSize: MainAxisSize.min,
-                          //     mainAxisAlignment: MainAxisAlignment.center,
-                          //     crossAxisAlignment: CrossAxisAlignment.center,
-                          //     children: [
-                          //       Container(
-                          //         width: 300,
-                          //         height: 40,
-                          //         decoration: BoxDecoration(
-                          //           borderRadius: BorderRadius.circular(20),
-                          //           color: Color(0x3f000000),
-                          //         ),
-                          //         padding: const EdgeInsets.only(
-                          //           left: 17,
-                          //           right: 209,
-                          //           top: 11,
-                          //           bottom: 6,
-                          //         ),
-                          //         child: Row(
-                          //           mainAxisSize: MainAxisSize.min,
-                          //           mainAxisAlignment: MainAxisAlignment.start,
-                          //           crossAxisAlignment:
-                          //               CrossAxisAlignment.center,
-                          //           children: [
-                          //             Text(
-                          //               "Password",
-                          //               style: GoogleFonts.poppins(
-                          //                 color: Color(0xff393e46),
-                          //                 fontSize: 15,
-                          //                 fontWeight: FontWeight.w500,
-                          //               ),
-                          //             ),
-                          //           ],
-                          //         ),
-                          //       ),
-                          //     ],
-                          //   ),
-                          // ),
                           Container(
                             width: 300 / 375 * width,
                             height: 40 / 812 * height,
                             child: TextField(
                               controller: passwordController,
                               style: GoogleFonts.poppins(
-                                color: Colors.black,
+                                color: Color(0xffd5d7d9),
                                 fontSize: 15,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -276,7 +152,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                 // errorText: error,
                                 labelText: "Password",
                                 labelStyle: GoogleFonts.poppins(
-                                  color: Colors.black,
+                                  color: Color(0xffd5d7d9),
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                 ),
@@ -368,7 +244,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                         Text(
                                           "Create Account",
                                           style: GoogleFonts.poppins(
-                                            color: Color(0xff393e46),
+                                            color: Color(0xfffffffe),
                                             fontSize: 15,
                                             fontWeight: FontWeight.w500,
                                           ),
@@ -384,7 +260,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                           Container(
                             width: 331 / 375 * width,
                             height: 2 / 812 * height,
-                            color: Color(0x7fc4c4c4),
+                            color: Color(0x7f94a1b2),
                           ),
                           SizedBox(height: 21 / 812 * height),
                           InkWell(
@@ -395,6 +271,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                               "Already have an account? Log In",
                               style: GoogleFonts.poppins(
                                 fontSize: 14,
+                                color: Color(0xfffffffe),
                               ),
                             ),
                           ),

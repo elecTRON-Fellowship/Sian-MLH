@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:sian/screens/redeem_option_screen.dart';
+import 'package:travelscape/screens/redeem_option_screen.dart';
 
 // ignore: camel_case_types
 class RedeemedErrorScreen extends StatefulWidget {

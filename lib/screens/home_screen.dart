@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sian/screens/map_screen.dart';
-import 'package:sian/widgets/auth.dart';
-import 'package:sian/widgets/google_auth.dart';
+import 'package:travelscape/screens/map_screen.dart';
+import 'package:travelscape/widgets/auth.dart';
+import 'package:travelscape/widgets/google_auth.dart';
 
 // ignore: camel_case_types
 class HomeScreen extends StatefulWidget {
@@ -18,18 +18,21 @@ class HomeScreen extends StatefulWidget {
 // ignore: camel_case_types
 class _HomeScreenState extends State<HomeScreen> {
   AuthService _auth = AuthService();
+
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
-    print(height);
-    print(width);
+    double _height = MediaQuery.of(context).size.height;
+    double _width = MediaQuery.of(context).size.width;
+    print(_height);
+    print(_width);
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Color(0xff222831),
-          body: ListView(children: [
+        backgroundColor: Color(0xff7f5af0),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(0.0, 0.0, 8.0, 0.0),
+              padding: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -38,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: IconButton(
                       icon: Icon(
                         FontAwesomeIcons.calendarAlt,
-                        size: 30,
+                        size: _height * 30 / 744,
                         color: Color(0xffeeeeee),
                       ),
                       onPressed: () {
@@ -51,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: IconButton(
                       icon: Icon(
                         FontAwesomeIcons.signOutAlt,
-                        size: 30,
+                        size: _height * 30 / 744,
                         color: Color(0xffeeeeee),
                       ),
                       onPressed: () {
@@ -74,22 +77,24 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SvgPicture.asset(
-                    "assets/SIAN.svg",
-                    height: 350,
-                  ),
-                  Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SvgPicture.asset(
+                  "assets/travelscape.svg",
+                  height: _height * 250 / 744,
+                ),
+                Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Column(
                     mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Container(
-                        width: width,
-                        height: 416 / 812 * height,
+                        width: _width,
+                        height: _height * 430 / 812,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(36),
@@ -97,103 +102,118 @@ class _HomeScreenState extends State<HomeScreen> {
                             bottomLeft: Radius.circular(0),
                             bottomRight: Radius.circular(0),
                           ),
-                          color: Color(0xffeeeeee),
+                          color: Color(0xff16161a),
                         ),
-                        padding: const EdgeInsets.only(
-                          top: 41,
-                          bottom: 55,
+                        padding: const EdgeInsets.symmetric(
+                          vertical: 25,
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SizedBox(
-                              width: 311,
-                              height: 55,
+                            Align(
+                              alignment: Alignment.center,
                               child: Text(
-                                "Welcome to Sian",
+                                "Welcome to",
                                 style: GoogleFonts.poppins(
-                                  color: Color(0xff393e46),
+                                  color: Color(0xfffffffe),
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: Alignment.center,
+                              child: Text(
+                                "TravelScape",
+                                style: GoogleFonts.poppins(
+                                  color: Color(0xffffffff),
                                   fontSize: 36,
                                   fontWeight: FontWeight.w700,
                                 ),
                               ),
                             ),
-                            SizedBox(height: 18.33),
-                            SizedBox(
-                              width: 311,
-                              height: 118,
-                              child: Text(
-                                "A place where you get rewarded for exploring. Let the voyage begin.",
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.poppins(
-                                  color: Color(0xff393e46),
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.w600,
+                            Padding(
+                              padding: const EdgeInsets.all(15.0), 
+                              child: SizedBox(
+                                width: _width * 311 / 360,
+                                child: Text(
+                                  "A place where you get rewarded for exploring. Let the voyage begin.",
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.poppins(
+                                    color: Color(0xff999999),
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w600,
+                                  ),
                                 ),
                               ),
                             ),
-                            SizedBox(height: 18.33),
-                            Container(
-                              width: 239,
-                              height: 58,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(16),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Color(0x3f000000),
-                                    blurRadius: 4,
-                                    offset: Offset(0, 4),
-                                  ),
-                                ],
-                                color: Color(0xff00adb5),
-                              ),
-                              child: InkWell(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => MapScreen(),
+                            Padding(
+                              padding: const EdgeInsets.all(15.0), 
+                              child: Container(
+                                width: _width * 239 / 360,
+                                height: _height * 50 / 744,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Color(0x3f000000),
+                                      blurRadius: 4,
+                                      offset: Offset(0, 4),
                                     ),
-                                  );
-                                },
-                                child: SizedBox(
-                                  width: 129,
-                                  height: 34,
-                                  child: Padding(
-                                    padding: const EdgeInsets.fromLTRB(
-                                        15.0, 0.0, 0.0, 0.0),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        Text(
-                                          "Let’s Explore",
-                                          style: GoogleFonts.poppins(
-                                            color: Color(0xffeeeeee),
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.w700,
+                                  ],
+                                  color: Color(0xfffffffe),
+                                ),
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => MapScreen(),
+                                      ),
+                                    );
+                                  },
+                                  child: SizedBox(
+                                    width: 129,
+                                    height: 34,
+                                    child: Padding(
+                                      padding: const EdgeInsets.fromLTRB(
+                                          15.0, 0.0, 0.0, 0.0),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Text(
+                                            "Let’s Explore",
+                                            style: GoogleFonts.poppins(
+                                              color: Color(0xff16161a),
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.w700,
+                                            ),
                                           ),
-                                        ),
-                                        Icon(
-                                          FontAwesomeIcons.arrowRight,
-                                          color: Colors.white,
-                                        )
-                                      ],
+                                          Icon(
+                                            FontAwesomeIcons.arrowRight,
+                                            color: Color(0xff16161a),
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
-                            SizedBox(height: 38.33),
                           ],
                         ),
                       ),
                     ],
-                  )
-                ])
-          ])),
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }
