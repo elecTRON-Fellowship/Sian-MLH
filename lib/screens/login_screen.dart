@@ -23,10 +23,8 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
-    print(height);
-    print(width);
+    double _height = MediaQuery.of(context).size.height;
+    double _width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color(0xff7f5af0),
@@ -43,10 +41,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     SvgPicture.asset(
                       "assets/travelscape.svg",
-                      height: 350,
+                      height: _height * 250 / 744,
                     ),
                     Container(
-                      width: width,
+                      width: _width,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(36),
@@ -73,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           SizedBox(
-                            width: 313 / 375 * width,
+                            width: 313 / 375 * _width,
                             child: Text(
                               "Log In",
                               textAlign: TextAlign.center,
@@ -84,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 30.83 / 812 * height),
+                          SizedBox(height: 30.83 / 812 * _height),
                           Container(
                             width: 300,
                             height: 40,
@@ -112,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 21 / 812 * height),
+                          SizedBox(height: 21 / 812 * _height),
                           Container(
                             width: 300,
                             height: 40,
@@ -140,7 +138,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 21 / 812 * height),
+                          SizedBox(height: 21 / 812 * _height),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
@@ -268,7 +266,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 21 / 812 * height),
+                          SizedBox(height: 21 / 812 * _height),
                           Container(
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
@@ -304,13 +302,13 @@ class _LoginScreenState extends State<LoginScreen> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 21 / 812 * height),
+                          SizedBox(height: 21 / 812 * _height),
                           Container(
                             width: 331,
                             height: 2,
                             color: Color(0x7f94a1b2),
                           ),
-                          SizedBox(height: 21 / 812 * height),
+                          SizedBox(height: 21 / 812 * _height),
                           InkWell(
                             onTap: () {
                               Navigator.pushNamed(context, "/");
