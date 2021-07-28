@@ -39,12 +39,14 @@ class _CalendarState extends State<CalendarScreen> {
   Widget build(BuildContext context) {
     double _height = MediaQuery.of(context).size.height;
     double _width = MediaQuery.of(context).size.width;
-    return Scaffold(
-      backgroundColor: Color(0xff222831),
-      body: SafeArea(
-        child: ListView(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Color(0xff7f5af0),
+        body: ListView(
+          padding: EdgeInsets.all(0),
           children: [
             Column(
+              mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Container(
@@ -53,7 +55,7 @@ class _CalendarState extends State<CalendarScreen> {
                   margin: EdgeInsets.all(10.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(300),
-                    color: Color(0xffeeeeee),
+                    color: Color(0xff16161a),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey,
@@ -71,6 +73,7 @@ class _CalendarState extends State<CalendarScreen> {
                           padding: EdgeInsets.only(left: 25.0, right: 25.0),
                           child: Icon(
                             FontAwesomeIcons.arrowLeft,
+                            color: Color(0xfffffffe),
                           ),
                         ),
                         onTap: () {
@@ -80,7 +83,7 @@ class _CalendarState extends State<CalendarScreen> {
                       Text(
                         "Travel Planner",
                         style: GoogleFonts.poppins(
-                          color: Color(0xff393e46),
+                          color: Color(0xfffffffe),
                           fontSize: 25,
                           fontWeight: FontWeight.w700,
                         ),
@@ -90,6 +93,7 @@ class _CalendarState extends State<CalendarScreen> {
                           padding: EdgeInsets.only(left: 25.0, right: 25.0),
                           child: Icon(
                             FontAwesomeIcons.signOutAlt,
+                            color: Color(0xfffffffe),
                           ),
                         ),
                         onTap: () {
@@ -127,11 +131,13 @@ class _CalendarState extends State<CalendarScreen> {
                     //To style the Calendar
                     calendarStyle: CalendarStyle(
                       markerDecoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xff16161a),
                         shape: BoxShape.circle,
                       ),
-                      defaultTextStyle:
-                          GoogleFonts.poppins(color: Colors.white),
+                      defaultTextStyle: GoogleFonts.poppins(
+                        color: Color(0xff16161a),
+                        fontWeight: FontWeight.w500,
+                      ),
                       holidayTextStyle: GoogleFonts.poppins(color: Colors.red),
                       isTodayHighlighted: true,
                       selectedDecoration: BoxDecoration(
@@ -139,7 +145,11 @@ class _CalendarState extends State<CalendarScreen> {
                         shape: BoxShape.rectangle,
                         borderRadius: BorderRadius.circular(5.0),
                       ),
-                      selectedTextStyle: TextStyle(color: Colors.white),
+                      selectedTextStyle: TextStyle(
+                        color: Color(0xff16161a),
+                        fontWeight: FontWeight.w500,
+
+                      ),
                       todayDecoration: BoxDecoration(
                         color: Colors.purpleAccent,
                         shape: BoxShape.rectangle,
@@ -177,14 +187,14 @@ class _CalendarState extends State<CalendarScreen> {
                         borderRadius: BorderRadius.circular(5.0),
                       ),
                       formatButtonTextStyle: TextStyle(
-                        color: Colors.white,
+                        color: Color(0xff16161a),
                       ),
                     ),
                   ),
                 ),
                 Container(
                   width: _width,
-                  height: 218 / 812 * _height,
+                  height: 240 / 812 * _height,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(36),
@@ -192,7 +202,7 @@ class _CalendarState extends State<CalendarScreen> {
                       bottomLeft: Radius.circular(0),
                       bottomRight: Radius.circular(0),
                     ),
-                    color: Color(0xffeeeeee),
+                    color: Color(0xff16161a),
                   ),
                   child: Container(
                     child: Padding(
@@ -203,13 +213,13 @@ class _CalendarState extends State<CalendarScreen> {
                           Text(
                             "Travel Plans",
                             style: GoogleFonts.poppins(
-                              color: Color(0xff393e46),
-                              fontSize: 24,
+                              color: Color(0xfffffffe),
+                              fontSize: 24, 
                               fontWeight: FontWeight.w700,
                             ),
                           ),
                           SizedBox(
-                            height: 50 / 812 * _height,
+                            height: 70 / 812 * _height,
                             child: ListView(
                               children: [
                                 ..._getEventsfromDay(selectedDay).map(
@@ -217,12 +227,12 @@ class _CalendarState extends State<CalendarScreen> {
                                     title: Text(
                                       event.title,
                                       style: GoogleFonts.poppins(
-                                        color: Colors.black,
+                                        color: Color(0xfffffffe), 
                                       ),
                                     ),
                                     leading: Icon(
                                       FontAwesomeIcons.calendar,
-                                      color: Colors.black,
+                                      color: Color(0xfffffffe), 
                                     ),
                                   ),
                                 ),
@@ -241,7 +251,7 @@ class _CalendarState extends State<CalendarScreen> {
                                   offset: Offset(0, 4),
                                 ),
                               ],
-                              color: Color(0xff00adb5),
+                              color: Color(0xfffffffe), 
                             ),
                             child: InkWell(
                               onTap: () => showDialog(
@@ -290,7 +300,7 @@ class _CalendarState extends State<CalendarScreen> {
                                   Text(
                                     "Add Event",
                                     style: TextStyle(
-                                      color: Color(0xffeeeeee),
+                                      color: Color(0xff16161a),
                                       fontSize: 20,
                                       fontFamily: "Poppins",
                                       fontWeight: FontWeight.w700,
@@ -304,7 +314,7 @@ class _CalendarState extends State<CalendarScreen> {
                                     ),
                                     child: Icon(
                                       FontAwesomeIcons.plusCircle,
-                                      color: Colors.white,
+                                      color: Color(0xff16161a),
                                     ),
                                   )
                                 ],
