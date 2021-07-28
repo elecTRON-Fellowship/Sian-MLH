@@ -12,7 +12,7 @@ class RewardPointCounter extends StatelessWidget {
       child: Text(
         "Points :  ${rewardPoint ?? "loading"}", 
         style: GoogleFonts.poppins(
-          color: Color(0xff4d0005),
+          color: Color(0xfffffffe),
           fontSize: 20,
           fontWeight: FontWeight.bold,
         ),

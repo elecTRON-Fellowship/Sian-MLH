@@ -124,7 +124,7 @@ class CaptureCard extends StatelessWidget {
             bottomLeft: Radius.circular(0),
             bottomRight: Radius.circular(0),
           ),
-          color: Color(0xffeeeeee),
+          color: Color(0xff16161a),
         ),
         child: Center(
           child: Column(
@@ -137,7 +137,7 @@ class CaptureCard extends StatelessWidget {
                   "Visit a place and share your moment with the world!",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
-                    color: Color(0xff393e46),
+                    color: Color(0xfffffffe),
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -147,7 +147,7 @@ class CaptureCard extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                    color: Color(0xff00adb5),
+                    color: Color(0xfffffffe),
                   ),
                   width: MediaQuery.of(context).size.width * 0.5,
                   child: Padding(
@@ -159,14 +159,14 @@ class CaptureCard extends StatelessWidget {
                         Text(
                           "Capture it",
                           style: GoogleFonts.poppins(
-                            color: Color(0xffeeeeee),
+                            color: Color(0xff16161a),
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
                         Icon(
                           Icons.camera_alt_outlined,
-                          color: Colors.white,
+                          color: Color(0xff16161a),
                         ),
                       ],
                     ),

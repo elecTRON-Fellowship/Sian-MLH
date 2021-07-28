@@ -42,7 +42,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
       margin: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(300),
-        color: Color(0xffeeeeee),
+        color: Color(0xff16161a), 
         boxShadow: [
           BoxShadow(
             color: Colors.grey,
@@ -57,10 +57,12 @@ class _CustomAppBarState extends State<CustomAppBar> {
           children: [
             GestureDetector(
               child: Padding(
-                padding: EdgeInsets.only(left: 25.0, right: 25.0),
-                child: Icon(FontAwesomeIcons.map,
-                    size: MediaQuery.of(context).size.height * 0.045),
-              ),
+                  padding: EdgeInsets.only(left: 25.0, right: 25.0),
+                  child: Icon(
+                    FontAwesomeIcons.map,
+                    size: MediaQuery.of(context).size.height * 0.045,
+                    color: Color(0xfffffffe),
+                  )),
               onTap: () {
                 Navigator.pushNamed(context, '/map');
               },
@@ -68,10 +70,12 @@ class _CustomAppBarState extends State<CustomAppBar> {
             RewardPointCounter(this.rewardPoint),
             GestureDetector(
               child: Padding(
-                padding: EdgeInsets.only(left: 25.0, right: 25.0),
-                child: Icon(Icons.wallet_membership_outlined,
-                    size: MediaQuery.of(context).size.height * 0.045),
-              ),
+                  padding: EdgeInsets.only(left: 25.0, right: 25.0),
+                  child: Icon(
+                    Icons.wallet_membership_outlined,
+                    size: MediaQuery.of(context).size.height * 0.045,
+                    color: Color(0xfffffffe),
+                  )),
               onTap: () {
                 Navigator.pushNamed(context, '/redeem');
               },
