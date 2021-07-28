@@ -7,6 +7,59 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:711214932514:android:ebe310051ead543962a07b",
+        "android_client_info": {
+          "package_name": "com.electron.travelscape"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "711214932514-5vtdb25ds81ji784n9er5oi9moql4a8g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.electron.travelscape",
+            "certificate_hash": "d15f62d87d97d491f84c9fc761f3bd5bd95f5479"
+          }
+        },
+        {
+          "client_id": "711214932514-h4p8iva16eam6lp2lq94mrt673ohngb7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.electron.travelscape",
+            "certificate_hash": "42ce8cb036e27b8299ead6e2c083e1940528f2ca"
+          }
+        },
+        {
+          "client_id": "711214932514-r4e7rjisnht28jkt3iagglku4n9obb6b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.electron.travelscape",
+            "certificate_hash": "7a1d96962a701c3d376523836c1186330d9002fc"
+          }
+        },
+        {
+          "client_id": "711214932514-747od3q8fv33pc3qsoukcvrua8dh4n1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWixG2hwdS-vRxsDgaz-TQjbeoLen-zkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "711214932514-747od3q8fv33pc3qsoukcvrua8dh4n1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:711214932514:android:a4964dd456bd962662a07b",
         "android_client_info": {
           "package_name": "com.example.sian"

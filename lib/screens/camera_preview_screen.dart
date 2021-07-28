@@ -49,7 +49,7 @@ class _CameraPreviewScreenState extends State<CameraPreviewScreen> {
             },
           );
           Share.shareFiles([widget.imgPath],
-              text: "Shared via Sian, your favourite tourism app! #Sian");
+              text: "Shared via TravelScape, your favourite tourism app! #TravelScape");
         },
         child: Icon( 
           Icons.share,
