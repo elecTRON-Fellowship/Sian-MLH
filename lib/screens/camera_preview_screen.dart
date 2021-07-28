@@ -1,13 +1,10 @@
 import 'dart:io';
-import 'dart:typed_data';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:path/path.dart';
 
 class CameraPreviewScreen extends StatefulWidget {
   CameraPreviewScreen({required this.imgPath});
@@ -49,7 +46,9 @@ class _CameraPreviewScreenState extends State<CameraPreviewScreen> {
             },
           );
           Share.shareFiles([widget.imgPath],
-              text: "Shared via TravelScape, your favourite tourism app! #TravelScape");
+              text: "Shared via TravelScape, your favourite tourism app! #TravelScape").then((value){
+                Navigator.pushNamed(context, "/map");
+              });
         },
         child: Icon( 
           Icons.share,
