@@ -10,7 +10,7 @@ class CafeRedeemScreen extends StatelessWidget {
     double _width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xff222831),
+        backgroundColor: Color(0xff7f5af0), 
         appBar: PreferredSize(
           preferredSize:
               Size.fromHeight(MediaQuery.of(context).size.height * 0.11),
@@ -26,18 +26,21 @@ class CafeRedeemScreen extends StatelessWidget {
                   "Blue Tokai",
                   "Get free donut on first visit.",
                   10,
+                  "bluetokai",
                 ),
                 SizedBox(height: _height * 0.061),
                 RedeemCard(
-                  "Coffee Bond",
+                  "Koffi Bond",
                   "Free Cupcakes with every coffee.",
                   50,
+                  "koffibond",
                 ),
                 SizedBox(height: _height * 0.061),
                 RedeemCard(
                   "Starbucks",
                   "Buy 1 Latte get 1 Free.",
                   100,
+                  "starbucks",
                 ),
                 SizedBox(height: _height * 0.05),
               ],

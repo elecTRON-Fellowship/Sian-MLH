@@ -12,7 +12,7 @@ class RestaurantRedeemScreen extends StatelessWidget {
     double _width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xff222831),
+        backgroundColor: Color(0xff7f5af0),
         appBar: PreferredSize(
           preferredSize:
               Size.fromHeight(MediaQuery.of(context).size.height * 0.11),
@@ -28,18 +28,21 @@ class RestaurantRedeemScreen extends StatelessWidget {
                   "McDonalds",
                   "Flat 50% off on family meal.",
                   10,
+                  "mcdonalds",
                 ),
                 SizedBox(height: _height * 0.061),
                 RedeemCard(
                   "KFC",
                   "Free Zinger on any order.",
                   50,
+                  "kfc",
                 ),
                 SizedBox(height: _height * 0.061),
                 RedeemCard(
                   "Pizza Hut",
                   "Buy 1 pizza get 1 Free.",
                   100,
+                  "pizzahut",
                 ),
                 SizedBox(height: _height * 0.05),
               ],

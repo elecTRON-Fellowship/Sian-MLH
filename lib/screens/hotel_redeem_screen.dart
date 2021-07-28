@@ -11,7 +11,7 @@ class HotelRedeemScreen extends StatelessWidget {
     double _width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xff222831),
+        backgroundColor: Color(0xff7f5af0),
         appBar: PreferredSize(
           preferredSize:
               Size.fromHeight(MediaQuery.of(context).size.height * 0.11),
@@ -24,21 +24,24 @@ class HotelRedeemScreen extends StatelessWidget {
               children: [
                 SizedBox(height: _height * 0.05),
                 RedeemCard(
-                  "Radison Blu",
+                  "W Hotels",
                   "20% off on first stay.",
                   10,
+                  "whotels",
                 ),
                 SizedBox(height: _height * 0.061),
                 RedeemCard(
                   "JW Marriott",
                   "15% off on stay.",
                   50,
+                  "jwmarriott",
                 ),
                 SizedBox(height: _height * 0.061),
                 RedeemCard(
                   "The Taj",
                   "25% off on stay.",
                   100,
+                  "taj",
                 ),
                 SizedBox(height: _height * 0.05),
               ],

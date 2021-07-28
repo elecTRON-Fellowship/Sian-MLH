@@ -13,7 +13,7 @@ class RedeemOptionScreen extends StatelessWidget {
     double _width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xff222831),
+        backgroundColor: Color(0xff7f5af0), 
         appBar: PreferredSize(
           preferredSize:
               Size.fromHeight(MediaQuery.of(context).size.height * 0.11),
@@ -29,18 +29,21 @@ class RedeemOptionScreen extends StatelessWidget {
                   "Restaurant",
                   "For some good food experience",
                   "/restaurant",
+                  "restaurant",
                 ),
                 SizedBox(height: _height * 0.061),
                 RedeemOptionCard(
                   "Cafe",
                   "For relaxing and chilling.",
                   "/cafe",
+                  "cafe",
                 ),
                 SizedBox(height: _height * 0.061),
                 RedeemOptionCard(
                   "Hotel",
                   "For a relaxing and fun stay.",
                   "/hotel",
+                  "hotel",
                 ),
                 SizedBox(height: _height * 0.05),
               ],

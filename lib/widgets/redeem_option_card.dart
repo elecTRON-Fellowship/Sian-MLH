@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class RedeemOptionCard extends StatelessWidget {
-  RedeemOptionCard(this.title, this.tagLine, this.route);
+  RedeemOptionCard(this.title, this.tagLine, this.route, this.image);
 
   final title;
   final tagLine;
   final route;
+  final image;
 
   @override
   Widget build(BuildContext context) {
@@ -18,28 +20,35 @@ class RedeemOptionCard extends StatelessWidget {
       height: _height * 0.28,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(28),
-        color: Color(0xffeeeeee),
+        color: Color(0xff16161a),  
       ),
       padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,
-            textAlign: TextAlign.center,
-            style: GoogleFonts.poppins(
-              color: Color(0xff393e46),
-              fontSize: 34,
-              fontWeight: FontWeight.w600,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center, 
+            children: [
+              Text(
+                title,
+                textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(
+                  color: Color(0xfffffffe),
+                  fontSize: 34,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SvgPicture.asset('assets/$image.svg')
+            ],
           ),
           SizedBox(
             width: _width * 0.88 * 0.6,
             child: Text(
               tagLine,
               style: GoogleFonts.poppins(
-                color: Color(0xff393e46),
+                color: Color(0xfffffffe), 
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
               ),
@@ -61,7 +70,7 @@ class RedeemOptionCard extends StatelessWidget {
                       offset: Offset(0, 4),
                     ),
                   ],
-                  color: Color(0xff00adb5),
+                  color: Color(0xfffffffe), 
                 ),
                 width: _width * 0.88 * 0.5,
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
@@ -72,7 +81,7 @@ class RedeemOptionCard extends StatelessWidget {
                     Text(
                       "Redeem",
                       style: GoogleFonts.poppins(
-                        color: Color(0xffffffff),
+                        color: Color(0xff16161a), 
                         fontSize: 20,
                         fontWeight: FontWeight.w700,
                       ),
@@ -81,7 +90,7 @@ class RedeemOptionCard extends StatelessWidget {
                     Icon(
                       FontAwesomeIcons.checkCircle,
                       size: 20,
-                      color: Color(0xffeeeeee),
+                      color: Color(0xff16161a),  
                     ),
                   ],
                 ),
