@@ -24,10 +24,11 @@ class _CameraPreviewScreenState extends State<CameraPreviewScreen> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        backgroundColor: Color(0xff00adb3),
+        backgroundColor: Color(0xff16161a),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Color(0xff16161a),
         onPressed: () async {
           var totalPoints;
           await FirebaseFirestore.instance
@@ -50,12 +51,15 @@ class _CameraPreviewScreenState extends State<CameraPreviewScreen> {
           Share.shareFiles([widget.imgPath],
               text: "Shared via Sian, your favourite tourism app! #Sian");
         },
-        child: Icon(Icons.share),
+        child: Icon( 
+          Icons.share,
+          color: Color(0xfffffffe),
+        ),
       ),
       body: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
+          children: [
             Expanded(
               flex: 2,
               child: Image.file(
@@ -63,45 +67,6 @@ class _CameraPreviewScreenState extends State<CameraPreviewScreen> {
                 fit: BoxFit.cover,
               ),
             ),
-            // Align(
-            //   alignment: Alignment.bottomCenter,
-            //   child: Container(
-            //     width: double.infinity,
-            //     height: 60.0,
-            //     color: Colors.black,
-            //     child: Center(
-            //       child: IconButton(
-            //         icon: Icon(
-            //           Icons.share,
-            //           color: Colors.white,
-            //         ),
-            //         onPressed: () async {
-            //           var totalPoints;
-            //           await FirebaseFirestore.instance
-            //               .collection("users")
-            //               .doc("${FirebaseAuth.instance.currentUser!.uid}")
-            //               .get()
-            //               .then((value) {
-            //             setState(() {
-            //               totalPoints = value["points"];
-            //             });
-            //           });
-            //           FirebaseFirestore.instance
-            //               .collection("users")
-            //               .doc("${FirebaseAuth.instance.currentUser!.uid}")
-            //               .update(
-            //             {
-            //               'points': totalPoints + 20,
-            //             },
-            //           );
-            //           Share.shareFiles([widget.imgPath],
-            //               text:
-            //                   "Shared via Sian, your favourite tourism app! #Sian");
-            //         },
-            //       ),
-            //     ),
-            //   ),
-            // )
           ],
         ),
       ),

@@ -80,7 +80,7 @@ class _CameraScreenState extends State<CameraScreen> {
                 height: 120,
                 width: double.infinity,
                 padding: EdgeInsets.all(15),
-                color: Colors.black,
+                color: Color(0xff16161a),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
