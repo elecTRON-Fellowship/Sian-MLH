@@ -33,7 +33,7 @@ class TravelScape extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/redeemederror', 
+      initialRoute: '/splash',  
       routes: {
         "/": (context) => CreateAccountScreen(),
         "/splash": (context) => SplashScreen(),
